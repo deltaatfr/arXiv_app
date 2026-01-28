@@ -2,76 +2,6 @@
 
 A fully functional, portable arXiv paper tracking and analysis system that supports automatic crawling, downloading, information extraction, and intelligent analysis.
 
-## Directory Structure
-
-```
-arXiv_app/
-├── README.md                           # Main project description
-├── LICENSE                            # Open source license
-├── requirements.txt                   # Dependency package list
-├── pyproject.toml                     # Modern Python project configuration
-├── setup.py                           # Traditional packaging configuration
-├── arxivtracker.py                    # Main program entry point
-├── config/                            # Configuration directory
-│   ├── __init__.py
-│   ├── system_config.json             # System configuration
-│   ├── api_config.json                # API configuration template
-│   ├── categories.json                # Paper categories
-│   └── logging_config.json            # Logging configuration
-├── src/                               # Source code (Python package compliant)
-│   ├── __init__.py
-│   ├── arxiv_tracker/                 # Main package
-│   │   ├── __init__.py
-│   │   ├── crawler.py                # Crawling module
-│   │   ├── downloader.py             # Download module
-│   │   ├── extractor.py              # Information extraction module
-│   │   ├── analyzer.py               # Analysis module
-│   │   ├── reporter.py               # Reporting module
-│   │   ├── utils/                    # Utilities module
-│   │   │   ├── __init__.py
-│   │   │   ├── state_manager.py
-│   │   │   ├── resource_monitor.py
-│   │   │   ├── cache_manager.py
-│   │   │   ├── file_utils.py
-│   │   │   └── logger.py
-│   │   └── data/                     # Data storage (relative path)
-│   │       ├── papers/               # PDF files
-│   │       ├── reports/              # Report files
-│   │       ├── cache/                # Cache files
-│   │       └── logs/                 # Log files
-├── scripts/                           # Helper scripts
-│   ├── __init__.py
-│   ├── setup_venv.py                 # Environment setup (original step 0)
-│   ├── reset_states.py               # State reset
-│   ├── check_abstract.py             # Abstract checking
-│   └── extract_from_pdf.py           # PDF extraction
-├── docs/                              # Project documentation
-│   ├── requirements.md               # Requirements document
-│   ├── technical_design.md           # Technical design
-│   ├── api_reference.md              # API reference
-│   ├── installation.md               # Installation and deployment
-│   ├── user_manual.md                # User manual
-│   ├── maintenance.md                # Maintenance document
-│   └── images/                       # Documentation images
-├── tests/                             # Test files
-│   ├── __init__.py
-│   ├── conftest.py                   # pytest configuration
-│   ├── test_crawler.py
-│   ├── test_downloader.py
-│   ├── test_extractor.py
-│   ├── test_analyzer.py
-│   └── integration/                  # Integration tests
-├── examples/                          # Usage examples
-│   ├── basic_usage.py
-│   ├── custom_config.py
-│   └── scheduled_task.py             # Scheduled task example
-├── docker/                            # Docker configuration
-│   ├── Dockerfile
-│   └── docker-compose.yml
-└── notebooks/                         # Jupyter Notebook examples
-    └── demo_usage.ipynb
-```
-
 ## Features
 
 - **Automatic Crawling**: Automatically crawl latest paper information from the arXiv website
@@ -191,12 +121,3 @@ for paper in results:
 ## License
 
 This project uses the MIT License.
-
-## Contributing
-
-Issues and Pull Requests are welcome!
-
-## Contact
-
-- Project Repository: https://github.com/deltaatfr/arxiv-tracker
-- Issue Reporting: https://github.com/deltaatfr/arxiv-tracker/issues
