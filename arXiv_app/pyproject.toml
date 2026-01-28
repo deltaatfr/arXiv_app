@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arxiv-tracker"
+version = "1.0.0"
+description = "arXiv论文跟踪和分析系统"
+readme = "README.md"
+authors = [
+    {
+        name = "arXiv Tracker Team",
+        email = "contact@arxiv-tracker.example"
+    }
+]
+license = {
+    file = "LICENSE"
+}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Researchers",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.2",
+    "tqdm>=4.66.1",
+    "psutil>=5.9.6",
+    "dashscope>=1.17.0",
+    "PyPDF2>=3.0.1",
+    "markdown>=3.4.4"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.11.0",
+    "flake8>=6.1.0",
+    "isort>=5.12.0"
+]
+
+[project.scripts]
+arxiv-tracker = "arxiv_tracker.cli:main"

@@ -1,0 +1,9 @@
+{
+    "dashscope_api_key": "YOUR_API_KEY_HERE",
+    "api_endpoint": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation",
+    "max_retries": 3,
+    "timeout": 60,
+    "model": "qwen-plus",
+    "temperature": 0.3,
+    "top_p": 0.8
+}

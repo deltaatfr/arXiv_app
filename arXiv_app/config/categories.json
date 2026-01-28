@@ -1,0 +1,39 @@
+{
+    "categories": [
+        {
+            "id": "cs.AI",
+            "name": "人工智能",
+            "full_name": "Computer Science - Artificial Intelligence"
+        },
+        {
+            "id": "cs.LG",
+            "name": "机器学习",
+            "full_name": "Computer Science - Machine Learning"
+        },
+        {
+            "id": "cs.CL",
+            "name": "计算语言学",
+            "full_name": "Computer Science - Computation and Language"
+        },
+        {
+            "id": "cs.CV",
+            "name": "计算机视觉",
+            "full_name": "Computer Science - Computer Vision and Pattern Recognition"
+        },
+        {
+            "id": "cs.NE",
+            "name": "神经科学",
+            "full_name": "Computer Science - Neural and Evolutionary Computing"
+        },
+        {
+            "id": "stat.ML",
+            "name": "统计机器学习",
+            "full_name": "Statistics - Machine Learning"
+        },
+        {
+            "id": "math.OC",
+            "name": "优化控制",
+            "full_name": "Mathematics - Optimization and Control"
+        }
+    ]
+}

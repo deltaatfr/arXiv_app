@@ -1,0 +1,36 @@
+# arXiv论文跟踪系统 Docker Compose 配置
+
+version: '3'
+
+services:
+  arxiv-tracker:
+    build: .
+    container_name: arxiv-tracker
+    image: arxiv-tracker:latest
+    volumes:
+      # 挂载数据目录
+      - ./src/arxiv_tracker/data:/app/src/arxiv_tracker/data
+      # 挂载配置目录
+      - ./config:/app/config
+    environment:
+      # 环境变量
+      - PYTHONUNBUFFERED=1
+      - DASHSCOPE_API_KEY=${DASHSCOPE_API_KEY:-}
+      - ARXIV_TRACKER_LOG_LEVEL=${ARXIV_TRACKER_LOG_LEVEL:-INFO}
+    restart: unless-stopped
+    # 健康检查
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    # 资源限制
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 1G

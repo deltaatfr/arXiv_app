@@ -1,0 +1,19 @@
+{
+    "data_dir": "src/arxiv_tracker/data",
+    "pdf_storage": "src/arxiv_tracker/data/papers",
+    "report_storage": "src/arxiv_tracker/data/reports",
+    "cache_storage": "src/arxiv_tracker/data/cache",
+    "log_dir": "src/arxiv_tracker/data/logs",
+    "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.CL",
+        "cs.CV",
+        "cs.NE"
+    ],
+    "max_workers": 4,
+    "timeout": 30,
+    "max_retries": 3,
+    "cache_ttl": 86400,
+    "default_paper_count": 10
+}
